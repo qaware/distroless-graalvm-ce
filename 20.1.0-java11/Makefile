@@ -7,7 +7,9 @@ image:
 	@echo "docker run -it --rm distroless-graalvm-ce:${GRAALVM_VERSION}"
 
 tag: image
+	@echo ""
 	docker tag distroless-graalvm-ce:${GRAALVM_VERSION} qaware/distroless-graalvm-ce:${GRAALVM_VERSION}
 
 push: tag
+	@echo ""
 	docker push qaware/distroless-graalvm-ce:${GRAALVM_VERSION}
